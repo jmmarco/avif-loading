@@ -3,33 +3,33 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Detecting Browsers</title>
+  <title>Conditionally loading AVIF files</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="banner"></div>
-  <script src="https://unpkg.com/bowser@2.7.0/es5.js"></script>
+  <script src="https://unpkg.com/bowser@2.10.0/es5.js"></script>
   <script>
 
     // Get the banner
-    const banner = document.querySelector('.banner')
+    const banner = document.querySelector('.banner');
 
     // Initialize bowser and get the results
-    const  { parsedResult } = bowser.getParser(window.navigator.userAgent)
+    const  { parsedResult } = bowser.getParser(window.navigator.userAgent);
 
     // Isolate the browser
-    const { browser } = parsedResult
+    const { browser } = parsedResult;
 
     // Get the version number and name for Chrome
-    const verNumber = Number(browser.version.split('.')[0])
-    const browserName = browser.name
+    const verNumber = Number(browser.version.split('.')[0]);
+    const browserName = browser.name;
 
     // Conditionally load backgrounds
     if (browserName == 'Chrome' && verNumber >= 85) {
-      banner.classList.add('banner-bg-avif')
+      banner.classList.add('banner-bg-avif');
     } else {
-      banner.classList.add('banner-bg-jpg')
+      banner.classList.add('banner-bg-jpg');
     }
   </script>
 </body>
