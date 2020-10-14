@@ -1,15 +1,17 @@
-.banner-bg-jpg {
+body {
+  margin: 0;
+}
+
+.banner {
   height: 400px;
+}
+
+.banner-bg-jpg {
   background-size: cover;
   background-image: url('photo.jpg'), linear-gradient(90deg, rgb(246, 250, 255) 0%, rgb(244, 249, 255) 33%, rgb(213, 227, 255) 70%, rgb(211, 225, 255) 100%);
 }
 
 .banner-bg-avif {
-  height: 400px;
   background-size: cover;
   background-image: url('photo.avif'), linear-gradient(90deg, rgb(246, 250, 255) 0%, rgb(244, 249, 255) 33%, rgb(213, 227, 255) 70%, rgb(211, 225, 255) 100%);
-}
 
-body {
-  margin: 0;
-}
